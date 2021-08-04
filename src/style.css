@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.place-holder {
+  width: 50px;
+  height: 50px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  vertical-align: bottom;
+  line-height: 50px;
+  font-size: xx-large;
+  color: red;
+  margin-right: 10px;
+}
+
+.button {
+  position: absolute;
+  top: 60%;
+  left: 49%;
+}
