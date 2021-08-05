@@ -1,15 +1,22 @@
-import React, { useEffect, useState, UseState } from "react";
+import React, { createRef, useEffect, useState, UseState } from "react";
 import "../style.css";
 
 function Game(props) {
   const blank = new Array(5).fill(null);
   const [input, setInput] = useState([]);
+  const ref = createRef();
 
-  function InsertInput() {
-    setInput([...input, "a"]);
-  }
+  useEffect(() => {
+    ref.current.focus();
+  }, [ref]);
+
+  const onKeyPress = (e) => {
+    console.log(e.key);
+    setInput([...input, e.key]);
+  };
+
   return (
-    <div>
+    <div tabIndex={1} onKeyPress={onKeyPress} ref={ref}>
       <div className="container">
         {blank.map((letter, index) => (
           <div className="place-holder" key={index}>
@@ -17,9 +24,6 @@ function Game(props) {
           </div>
         ))}
       </div>
-      <button className="button" onClick={InsertInput}>
-        add "a" to the div
-      </button>
     </div>
   );
 }
