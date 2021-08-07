@@ -1,11 +1,9 @@
-.container {
+.letter-container {
   display: flex;
   flex-direction: row;
   position: absolute;
   top: 40%;
   left: 40%;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .place-holder {
@@ -16,7 +14,6 @@
   vertical-align: bottom;
   line-height: 50px;
   font-size: xx-large;
-  color: red;
   margin-right: 10px;
 }
 
