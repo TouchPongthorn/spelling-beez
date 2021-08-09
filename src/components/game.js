@@ -1,7 +1,7 @@
 import React, { createRef, useEffect, useState, UseState } from "react";
 import "../style.css";
 
-function Game(props) {
+const Game = (props) => {
   const blank = new Array(5).fill(null);
   const [track, setTrack] = useState(0);
   const [input, setInput] = useState([]);
@@ -35,5 +35,5 @@ function Game(props) {
       </div>
     </div>
   );
-}
+};
 export default Game;
